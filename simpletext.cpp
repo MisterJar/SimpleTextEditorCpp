@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-using namespace std;
 /*
 	MAKE THIS TEXT EDITOR AS SMALL AS POSSIBLE WITH THE FUNCTIONALITY IN MIND
 	THANK YOU VERY MUCH AND MAKE SURE YOU PUT ALOT OF COMMENTS SO POEPLE CAN
@@ -14,14 +13,32 @@ using namespace std;
 	5. Done.
 */
 // make functions like saving or exiting or something. i dont know
-ofstream file; // initialize the file name orsomething or the function
+std::ofstream file; // initialize the file name or something or the function
+std::string filename = "otherfile";
+int length;
+int userInput()
+{
+	int user, output, input, otherinput;
+	
+	std::cin >> user;
+	std::cout << user << std::endl;
+	// TODO
+}
+int createBuffer()
+{
+	char* buffer = new char[length];
+	delete[] buffer;
+	
+	
+	// TODO
+}
 int saveFile()
 {
-	// TODO
+	//TODO
 }
 int openFile()
 {
-	// TODO
+	
 }
 int exitFile()
 {
@@ -29,11 +46,7 @@ int exitFile()
 }
 int main()
 {
-	while (/* condition */) { // while the file is open, do whatever
-		/* code */
-	}
-	if (/* condition */) { // file is saved. exit or something
-		/* code */
-	}
+	//std::filename.open("testfile.txt", std::ios::in);
+	file.close();
 	return 0;
 }
