@@ -31,7 +31,11 @@ int bufferTest()
 
 int main()
 {
-	openingafile();
+	ofstream file;
+	file.open("psudeocode.txt", ios::in | ofstream::out | ofstream::app);
+	file << "this is a testy thingy!" << endl; // this is going to create an empty file.. but it doesnt work :P
+	file.close();
+
 	bufferTest();
 	cout << "Hello world" << endl;
 	return 0;
