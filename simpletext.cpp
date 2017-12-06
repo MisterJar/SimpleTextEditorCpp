@@ -14,39 +14,39 @@
 */
 // make functions like saving or exiting or something. i dont know
 std::ofstream file; // initialize the file name or something or the function
-std::string filename = "otherfile";
 int length;
-int userInput()
+int userInput(void)
 {
-	int user, output, input, otherinput;
 	
-	std::cin >> user;
-	std::cout << user << std::endl;
 	// TODO
 }
 int createBuffer()
 {
-	char* buffer = new char[length];
+	const char* buffer = new char[length];
 	delete[] buffer;
-	
+	if(!file.rdbuf())// read the buffers or something. I DONT KNOW ANYMORE!
+	{
+		std::cout << "the rdbuf thingy worked!" << std::endl;
+		return 0;
+
+	}
+			
 	
 	// TODO
 }
 int saveFile()
 {
-	//TODO
+	//TODO! MAKE DAMN SAVE FILES BUT NOT RIGHT NOW
 }
-int openFile()
-{
-	
-}
-int exitFile()
+int exitFiletest()
 {
 	// TODO
 }
 int main()
 {
-	//std::filename.open("testfile.txt", std::ios::in);
+	file.open("test.txt");// std::ios::out | std::ios::in);
+	file << "hello world this is just a test dont worry \n";
 	file.close();
+
 	return 0;
 }
